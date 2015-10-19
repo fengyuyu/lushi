@@ -3,11 +3,13 @@ using System.Collections;
 
 public class StartMenu : MonoBehaviour {
 
+    public TweenPosition selectFrame;
     public MovieTexture startMovie;
     public TweenScale logoTween;
 
     private bool isDrawMovie;
     private bool isShowTip;
+    private bool isCanShowSelectFrame;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,9 @@ public class StartMenu : MonoBehaviour {
 
         isDrawMovie = true;
         isShowTip = false;
+        isCanShowSelectFrame = false;
+
+        logoTween.AddOnFinished(logoTweenFinishCallBack);
 	}
 	
 	// Update is called once per frame
@@ -28,6 +33,12 @@ public class StartMenu : MonoBehaviour {
 
         if (isDrawMovie != startMovie.isPlaying) {
             StopMovie();
+        }
+
+        if (isCanShowSelectFrame == true && Input.GetMouseButtonDown(0)) {
+            Debug.Log("sss11");
+            selectFrame.PlayForward();
+            isCanShowSelectFrame = false;
         }
 	}
 
@@ -46,5 +57,10 @@ public class StartMenu : MonoBehaviour {
         startMovie.Stop();
 
         logoTween.PlayForward();
+    }
+
+    private void logoTweenFinishCallBack() {
+        isCanShowSelectFrame = true;
+        Debug.Log("asd");
     }
 }
