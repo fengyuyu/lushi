@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BlackMask.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -181,10 +180,14 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
-     <Compile Include="Assets\PreStartMgr.cs" />
-     <Compile Include="Assets\Scripts\HeroHeadClick.cs" />
-     <Compile Include="Assets\Scripts\SelsctRoleMgr.cs" />
-     <Compile Include="Assets\Scripts\StartMenu.cs" />
+     <Compile Include="Assets\Scripts\battle\BattleInitMgr.cs" />
+     <Compile Include="Assets\Scripts\battle\CrystalMgr.cs" />
+     <Compile Include="Assets\Scripts\battle\HistoryCardMgr.cs" />
+     <Compile Include="Assets\Scripts\start\BlackMask.cs" />
+     <Compile Include="Assets\Scripts\start\HeroHeadClick.cs" />
+     <Compile Include="Assets\Scripts\start\PreStartMgr.cs" />
+     <Compile Include="Assets\Scripts\start\SelsctRoleMgr.cs" />
+     <Compile Include="Assets\Scripts\start\StartMenu.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.6.0.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
@@ -208,6 +211,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
@@ -221,6 +225,10 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/unity3d4.6/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{007B7833-3511-9800-A1AE-6AD4697C34E4}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

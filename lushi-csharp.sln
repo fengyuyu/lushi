@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{660DB613-FD84-4A10-7672-EC8215E9CB90}") = "lushi", "Assembly-CSharp-firstpass-vs.csproj", "{007B7833-3511-9800-A1AE-6AD4697C34E4}"
+EndProject
 Project("{660DB613-FD84-4A10-7672-EC8215E9CB90}") = "lushi", "Assembly-CSharp-vs.csproj", "{22709D95-BC96-92CD-A0AF-A00C21190C67}"
 EndProject
 Project("{660DB613-FD84-4A10-7672-EC8215E9CB90}") = "lushi", "Assembly-CSharp-Editor-vs.csproj", "{FC4497AE-E603-D8CC-4D57-4038539335CE}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{007B7833-3511-9800-A1AE-6AD4697C34E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007B7833-3511-9800-A1AE-6AD4697C34E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007B7833-3511-9800-A1AE-6AD4697C34E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007B7833-3511-9800-A1AE-6AD4697C34E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22709D95-BC96-92CD-A0AF-A00C21190C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22709D95-BC96-92CD-A0AF-A00C21190C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22709D95-BC96-92CD-A0AF-A00C21190C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-										GlobalSection(MonoDevelopProperties) = preSolution
+																																		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
