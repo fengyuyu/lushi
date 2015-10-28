@@ -8,6 +8,9 @@ public class HistoryCardMgr : MonoBehaviour {
     public GameObject card1;
     public GameObject card2;
 
+    //历史卡牌容量
+    public const int CARD_NUM = 6;
+
     private float offsetY;
     private GameObject inCard;
     private GameObject outCard;
@@ -25,20 +28,21 @@ public class HistoryCardMgr : MonoBehaviour {
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.LeftControl)) {
-            StartCoroutine(AddCard());
-            //AddCard();
+            //StartCoroutine(AddCard());
+            AddCard();
+            //inCard.AddComponent<iTween>();
         }
     }
 
-    public IEnumerator AddCard() {
-        GameObject go = GameObject.Instantiate(preCard) as GameObject;
-        yield return 0;
+    public void AddCard() {
+        GameObject go =  NGUITools.AddChild(this.gameObject, preCard);
         go.transform.position = inCard.transform.position;
         
-        iTween.MoveTo(go, card1.transform.position, 1f);
+        iTween.MoveTo(go, card1.transform.position, 0.5f);
         historyCard.Add(go);
-        
-        if (historyCard.Count == 7) { 
+
+        if (historyCard.Count == CARD_NUM + 1)
+        { 
             iTween.MoveTo(historyCard[0], outCard.transform.position, 1f);
             Destroy(historyCard[0], 2f);
             historyCard.RemoveAt(0);
